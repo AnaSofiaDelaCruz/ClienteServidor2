@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'Login',
     'Example1',
+    'Example2',
     
 ]
 
