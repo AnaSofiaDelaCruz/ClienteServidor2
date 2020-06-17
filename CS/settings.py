@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
-    'Login',
+    'Login'
     
 ]
 
@@ -99,13 +99,23 @@ WSGI_APPLICATION = 'CS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+    #'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+  #      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #   }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd6n5rv5do68q40',
+        'USER': 'lzxodbkiljnnxt',
+        'PASSWORD':'64cef3f4e9766c8c106b4adafdddf802261f4b77b6fd143ca12f26fa4db55438'
+        'HOST': 'ec2-35-172-73-125.compute-1.amazonaws.com'
+        'PORT':'5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
