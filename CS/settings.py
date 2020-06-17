@@ -57,7 +57,7 @@ SITE_1D = 1
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticated',),
-    'DEFAULT_AUTHENTICATE_CLASSES':('rest_framework.authentication.TokenAuthentication',),
+    'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework.authentication.TokenAuthentication',),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100
 }
@@ -114,7 +114,7 @@ DATABASES = {
         'USER': 'lzxodbkiljnnxt',
         'PASSWORD':'64cef3f4e9766c8c106b4adafdddf802261f4b77b6fd143ca12f26fa4db55438',
         'HOST': 'ec2-35-172-73-125.compute-1.amazonaws.com',
-        'PORT':'5432'
+        'PORT':'5432',
     }
 }
 
