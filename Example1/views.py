@@ -34,7 +34,8 @@ class ExampleDetail(APIView):
             return 404
 
     def get(self,request,id,format=None):
-        example1 = self.get_object(id)
         print("GET Detail")
+        example1 = self.get_object(id)
+        print(example1)
         serializer=Example1Serializers(example1)
         return Response(serializer.data)
