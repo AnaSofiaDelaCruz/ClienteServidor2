@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from decouple import config
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,8 +25,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 SECRET_KEY = 'SECRET_KEY'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+DEBUG = config('DEBUG', default=False, cast=bool)
+EMAIL_HOST = config('EMAIL_HOST', default='localhost')
+EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 
 ALLOWED_HOSTS = ['clienteservidorana2.herokuapp.com']
 
@@ -51,6 +58,7 @@ INSTALLED_APPS = [
     'Login',
     'Example1',
     'Example2',
+    'Register',
     
 ]
 
